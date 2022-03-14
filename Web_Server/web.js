@@ -7,7 +7,7 @@ const app = http.createServer((request, response) => {
     response.writeHead(httpStatus.OK, {
         "Content-Type": "text/html",
     });
-    let responseMessage = "<h1> Hello, SRT621!</h1>";
+    let responseMessage = "<h1> Hello, SRT621!</h1> <script>" ;
     response.write(responseMessage);
     response.end();
     console.log('Sent a response : ${responseMessage}');
@@ -15,3 +15,5 @@ const app = http.createServer((request, response) => {
 //starting webserver
 app.listen(port);
 console.log('The Server has started and is listening on port number: ${port}');
+
+
