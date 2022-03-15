@@ -13,5 +13,7 @@ if(hr > 12){
     hr = hr - 12;
     amOrpm = "PM";
 }     
-document.getElementById('date').innerHTML =  + hr+':'+min+':'+sec +' '+amOrpm + '<br>' +Full_Data;
+// document.write =  + hr+':'+min+':'+sec +' '+amOrpm + '<br>' +Full_Data;
+
+console.log( 'The time is :'+ hr +':'+min+':'+sec +' '+amOrpm + ' Date is ' + Full_Data);
 
