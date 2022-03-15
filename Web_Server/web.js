@@ -7,7 +7,7 @@ const app = http.createServer((request, response) => {
     response.writeHead(httpStatus.OK, {
         "Content-Type": "text/html",
     });
-    let responseMessage = "<h1> Hello, SRT621!</h1> <script>" ;
+    let responseMessage = "<h1> Welcome to SRT621</h1>" ;
     response.write(responseMessage);
     response.end();
     console.log('Sent a response : ${responseMessage}');
