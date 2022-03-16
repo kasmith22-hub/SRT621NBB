@@ -17,4 +17,5 @@ if(hr > 12){
 // document.getElementById('date').innerHTML = k;
 
 console.log( 'The time is :'+ hr +':'+min+':'+sec +' '+amOrpm + ' Date is ' + Full_Data);
-document.getElementById('date').innerHTML = 'The time is :'+ hr +':'+min+':'+sec +' '+amOrpm + ' Date is ' + Full_Data;
+document.getElementById('date').innerHTML =  + hr+':'+min+':'+sec +' '+amOrpm + '<br>' +Full_Data;
+

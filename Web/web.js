@@ -1,26 +1,19 @@
 const port = 8989,
   http = require("http"),
   httpStatus = require("http-status-codes"),
-  fs = require("fs");                                     
-const routeMap = {                                        
-  "/": "view/index.html",
-  };
-
-http
-  .createServer((req, res) => {
-    res.writeHead(httpStatus.OK, {
-      "Content-Type": "text/html"
+  app = http.createServer((request, response) => {
+    console.log("Received an incoming request!");
+    response.writeHead(httpStatus.OK, {
+      "Content-Type": "text/html",
     });
-    if (routeMap[req.url]) {
-      fs.readFile(routeMap[req.url], (error, data) => {   
-        res.write(data);                                 
-        res.end();
-      });
-    } else {
-      res.end("<h1>Sorry, not found.</h1>");
-    }
-  })
-  .listen(port);
-console.log(`The server has started and is listening
- on port number: ${port}`);
+
+const curentTime = new Date().toString();
+    let responseMessage = curentTime;
+    response.write(responseMessage);
+    response.end();
+    console.log(`Sent a response : ${responseMessage}`);
+  });
+
+app.listen(port);
+console.log(`The server has started and is listenign on port number: ${port}`);
 
