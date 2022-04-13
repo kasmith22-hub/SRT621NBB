@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BookNumber 3</title>
+    <style>
+      body{
+        background-color: rgb(236, 247, 250);
+        margin-top: 100px;
+      }
+     
+      p {
+         font-size: larger;
+        color: black;
+        width: 400px;
+        height: 30px;
+        background-color: rgb(164, 220, 246);
+        padding: 10px;
+        margin-top: auto;
+        
+      }
+      #box {
+        width: 500px;
+        height: 120px;
+        background-color: rgb(165, 165, 165);
+        font-size: 20px;
+        padding: 10px;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://localhost:3000/home"> <--Home</a>
+    
+    <h2><%=subscribers.bookName %></h2>
+    <div id="box">
+      <p style="margin-left: 0.4in"><b>Author:</b><%=subscribers.Author %></p>
+      <p style="margin-left: 0.4in"><a href="<%=subscribers.Purchaselink%>" target="_blank">Buy on Amazon!</a></p>
+    </div>
+  </body>
+</html>
