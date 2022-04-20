@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kasmith-SRT621-Lab 10</title>
+    <style>
+      body{
+        background-color: rgb(90, 179, 207);
+        margin-top: 100px;
+      }
+      .footer {
+   position:fixed;
+   left: 0;
+   bottom: 10;
+   width: 100%;
+   background-color: rgb(167, 160, 160);
+   color: rgb(250, 239, 239);
+   text-align: center;
+}
+      #list{
+        text-align: center;
+        color: black;
+        width: 560px;
+        height: 19px;
+        background-color: white;
+        padding: 28px; 
+      
+      }
+      table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+      #box{
+        text-align: center;
+        width: 590px;
+        height: 50px;
+        background-color: rgb(165, 165, 165);
+        font-size: 20px; 
+        padding: 25px; 
+        margin-left: 3.5in;    
+      }
+    
+    </style>
+    </head>
+    <body>
+
+<h1 style="text-align: center;">Your Book is :<%=newbook.bookName%></h1>
+<table id="list" class="center">
+<tr  style="align-items: center;">
+<th id="box">Book Name</th>
+<td id="box"><%=newbook.bookName%></td>
+</tr>
+
+
+<tr>
+<th id="box">Author's Name</th>
+<td id="box"><%=newbook.Author%></td>
+</tr> 
+
+<tr>
+<th id="box">Amazon Link</th>
+<td id="box"><%=newbook.Purchaselink%></td>
+</tr>
+</table>
+
+
+<div class="footer">
+    <h4> <a href="http://localhost:3000/books"> List of Books</a> | <a href="http://localhost:3000/books/addNewBooks"> Add new books</a>   |  <a href="http://localhost:3000/books/DeleteABook">  Delete A Book</a>  </h4>
+  </div>
+  
+  </body>
+  </html>
+
+

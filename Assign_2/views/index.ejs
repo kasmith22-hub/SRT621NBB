@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kasmith-SRT621-Lab 10</title>
+    <style>
+      body{
+        background-color: rgb(90, 179, 207);
+        margin-top: 100px;
+      }
+      .footer {
+   position:absolute;
+   left: 0;
+   bottom: 10;
+   width: 100%;
+   background-color: rgb(167, 160, 160);
+   color: rgb(250, 239, 239);
+   text-align: center;
+}
+      #list{
+        text-align: center;
+        color: black;
+        width: 560px;
+        height: 19px;
+        background-color: white;
+        padding: 28px; 
+        /* margin-top: auto;    */
+        /* margin-left: 0.7in;  */
+        /* margin-right: auto; */
+      }
+      table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+      #box{
+        text-align: center;
+        width: 590px;
+        height: 50px;
+        background-color: rgb(165, 165, 165);
+        font-size: 20px; 
+        padding: 25px; 
+        margin-left: 3.5in;    
+      }
+    </style>
+    </head>
+    <body>
+<h1 style ="text-align:center" >Click On Any Book To See The Details</h1>
+
+<table  id="list" class="center">
+    
+
+
+    <% books.forEach(newbook => { %>
+        <tr style="align-items: center;">
+            <td id="box">
+           <a href="<%=`/books/${newbook._id}`%>">
+               <%=newbook.bookName %>
+        </a> </td>
+
+             <!-- <td><%=newbook.Author %></td>
+            <td><%=newbook.PurchaseLink %></td>  -->
+            <!-- <td><a href="<%=`/books/${newbook._id}/delete?_method=DELETE`%>" onclick=" return confirm ('Are you sure you want to delete this book?')">Delete</a></td>
+        </tr> -->
+        </tr>
+      
+
+    <%}); %>
+
+
+</table>
+
+
+<div class="footer">
+    <h4> <a href="http://localhost:3000/books"> List of Books</a> | <a href="http://localhost:3000/books/addNewBooks"> Add new books</a>   |  <a href="http://localhost:3000/books/DeleteABook">  Delete A Book</a>  </h4>
+  </div>
+  
+  </body>
+  </html>

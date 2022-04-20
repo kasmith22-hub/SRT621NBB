@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BookNumber 1</title>
+    <style>
+           .footer {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(167, 160, 160);
+   color: rgb(250, 239, 239);
+   text-align: center;
+        
+      }
+  input, label[type=text] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-left: 0.4in;
+} 
+input[type=submit] {
+  background-color: #c49fe7;
+  color: white;
+  padding: 14px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-left: 0.7in;
+}
+
+    </style>
+    </head>
+    <body>
+<div class="data-form">
+<form action="/books/create" method="POST">
+
+
+    <h3>Add A New Book </h3>
+    <label for="uname"><b>Name:</b></label>
+    <br>
+   <input type="text" name="bookName" id="inputbookName" placeholder="Book Name" required>
+   <br><br><br>
+   <label for="uauthor"><b>Author's Name:</b></label>
+   <br>
+   <input type="text" name="Author"  id="inputAuthor" placeholder="Author's Name" required>
+   <br><br><br>
+   <label for="ulink"><b>Amazon Link:</b></label>
+   <br>
+   
+   <input type="text" name="Purchaselink" id="inputPurchaselink" placeholder="Purchaselink" required>
+   <br><br>
+   <input type="submit" name="submit">
+   </form>
+   <div class="footer">
+       <h4> <a href="http://localhost:3000/books"> List of Books</a> |  <a href="http://localhost:3000/books/addNewBooks"> Add new books</a>   |  <a href="http://localhost:3000/books/DeleteABook">  Delete A Book</a>  </h4>
+     </div>
+      
+   </body>
+   </html>
+
+
+
+
+
+
+
+

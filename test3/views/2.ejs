@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BookNumber 2</title>
+    <style>
+      body{
+        background-color: rgb(246, 246, 249);
+        margin-top: 100px;
+      }
+      #box {
+        width: 500px;
+        height: 120px;
+        background-color: rgb(165, 165, 165);
+        font-size: 20px;
+        padding: 10px;
+     
+      }
+      .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(167, 160, 160);
+   color: rgb(250, 239, 239);
+   text-align: center;
+      }
+      p {
+       
+        color: black;
+        width: 400px;
+        height: 30px;
+        background-color: rgb(161, 208, 237);
+        padding: 10px;
+        margin-top: auto;
+       
+      }
+    </style>
+ 
+  </head>
+
+  <body>
+       
+    <h2><%=subscribers.bookName %></h2>
+    <div id="box">
+      <p style="margin-left: 0.4in"><b>Author:</b><%=subscribers.Author %></p>
+      <p style="margin-left: 0.4in"><a href="<%=subscribers.Purchaselink%>" target="_blank">Buy on Amazon!</a></p>
+    </div>
+    <div class="footer">
+      <h4> <a href="http://localhost:3000/home"> List of Books</a> | <a href="http://localhost:3000/addNewBook"> Add new books</a> | <a href="http://localhost:3000/addNewBook"> Add new books</a>   |  <a href="http://localhost:3000/DeleteABook">  Delete A Book</a>  </h4>
+    </div>
+  </body>
+</html>

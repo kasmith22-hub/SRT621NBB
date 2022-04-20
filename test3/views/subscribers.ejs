@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kasmith-SRT621-Lab 10</title>
+    <style>
+      body{
+        background-color: rgb(90, 179, 207);
+        margin-top: 100px;
+      }
+      .footer {
+   position:absolute;
+   left: 0;
+   bottom: 10;
+   width: 100%;
+   background-color: rgb(167, 160, 160);
+   color: rgb(250, 239, 239);
+   text-align: center;
+}
+      #list{
+        text-align: center;
+        color: black;
+        width: 560px;
+        height: 19px;
+        background-color: white;
+        padding: 28px; 
+        /* margin-top: auto;    */
+        /* margin-left: 0.7in;  */
+        /* margin-right: auto; */
+      }
+      table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+      #box{
+        text-align: center;
+        width: 590px;
+        height: 50px;
+        background-color: rgb(165, 165, 165);
+        font-size: 20px; 
+        padding: 25px; 
+        margin-left: 3.5in;    
+      }
+    </style>
+     </head>
+     <body>
+     
+       <h1 style ="text-align:center" >Click On Any Book To See The Details</h1>
+       <table id="list" class="center">
+         <% let i = 0 %>
+<% subscribers.forEach(s=>
+{ i ++;
+    %> <tr style="align-items: center;">
+      <td id="box">
+      <a href="http://localhost:3000/books/<%=i%>" target="_blank"><%=s.bookName %></a>
+        <!-- <b>Book Name:</b> -->
+        <!-- <%= s.bookName %> -->
+    </td>
+    <!-- <p id="list">
+        <b>Author's Name:</b>
+        <%= s.Author %>
+    </p>
+    <p id="list">
+        <b>Purchase Link:</b>
+        <%= s.Purchaselink %>
+    </p> -->
+    
+  </tr>
+<%});
+%>
+
+</table>
+   
+<div class="footer">
+  <h4> <a href="http://localhost:3000/subscribers"> List of Books</a> |  <a href="http://localhost:3000/addNewBook"> Add new books</a>  |  <a href="http://localhost:3000/DeleteABook">  Delete A Book</a>  </h4>
+</div>
+
+</body>
+
+</html>
