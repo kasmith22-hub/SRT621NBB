@@ -14,6 +14,18 @@ index: (req, res) => {
    });
       
   },
+  index2: (req, res) => {
+    ListBooks.find({})
+   .then(books =>{
+       res.render("home",{
+           books: books
+       })
+   })
+   .catch(error => {
+       console.log(`Error fetching books:${error.message}`)
+       res.redirect("/");
+      });
+    },
 show: (req, res, next) => {
         let bookID = req.params.id;
         ListBooks.findById(bookID)
@@ -34,6 +46,7 @@ new: (req, res) => {
          
    },
 
+  
 deletebk: (req, res) => {
         ListBooks.find({})
        .then(books =>{
@@ -55,7 +68,7 @@ create: (req, res, next) =>{
          // insert it in the database coming from the form
          ListBooks.create(bookParam)
          .then(newbook => {
-             res.locals.redirect = "/books";
+             res.locals.redirect = "/home";
              res.locals.newbook = newbook;
              next();
          })
@@ -77,7 +90,7 @@ delete : (req, res, next) => {
              let bookID = req.params.id;
              ListBooks.findByIdAndRemove(bookID)
              .then(()=>{
-                 res.locals.redirect = "/books";
+                 res.locals.redirect = "/home";
                  next();
              })
              .catch(error => {

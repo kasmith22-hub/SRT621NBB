@@ -12,8 +12,6 @@ app.use(
   })
 );
 
-
-
 app.use(express.json());
 
 app.use(
@@ -36,8 +34,9 @@ db.once("open", () => {
 });
 
 app.get("/books", newBKController.index);
-app.get("/books/addNewBooks", newBKController.new);
-app.get("/books/DeleteABook", newBKController.deletebk);
+app.get("/home", newBKController.index2);
+app.get("/addNewBooks", newBKController.new);
+app.get("/DeleteABook", newBKController.deletebk);
 app.post("/books/create", newBKController.create, newBKController.redirectView);
 app.get("/books/:id", newBKController.show, newBKController.showView);
 app.delete("/books/:id/delete", newBKController.delete, newBKController.redirectView);
